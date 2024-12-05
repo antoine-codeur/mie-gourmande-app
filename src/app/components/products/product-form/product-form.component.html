@@ -1,0 +1,24 @@
+<!-- à refaire avec des form group -->
+<form (ngSubmit)="saveProduct()">
+    <label for="name">Nom</label>
+    <input id="name" [(ngModel)]="product.name" name="name" required />
+  
+    <label for="description">Description</label>
+    <textarea id="description" [(ngModel)]="product.description" name="description" required></textarea>
+  
+    <label for="price">Prix</label>
+    <input id="price" type="number" [(ngModel)]="product.price" name="price" required />
+  
+    <label for="stock">Stock</label>
+    <input id="stock" type="number" [(ngModel)]="product.stock" name="stock" required />
+  
+    <label for="category">Catégorie</label>
+    <select id="category" [(ngModel)]="product.categoryId" name="category" required>
+      <option *ngFor="let category of categories" [value]="category._id">
+        {{ category.name }}
+      </option>
+    </select>
+  
+    <button type="submit">Sauvegarder</button>
+    <button type="button" (click)="cancel()">Annuler</button>
+</form>

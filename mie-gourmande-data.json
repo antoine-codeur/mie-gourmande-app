@@ -44,6 +44,24 @@
       "description": "Sandwich classique au jambon et beurre frais.",
       "image": "sandwich.jpg",
       "stock": 40
+    },
+    {
+      "id": "49b2",
+      "_id": "",
+      "name": "Pain au maïs",
+      "description": "",
+      "price": 1.2,
+      "stock": 2,
+      "categoryId": "6751790809f16621aaaee8d6"
+    },
+    {
+      "id": "51e5",
+      "_id": "",
+      "name": "Tarte au citron",
+      "description": "C'est bon !",
+      "price": -7,
+      "stock": 1,
+      "categoryId": "6751790809f16621aaaee8d7"
     }
   ],
   "categories": [

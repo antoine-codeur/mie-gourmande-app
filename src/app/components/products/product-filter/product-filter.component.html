@@ -1,0 +1,17 @@
+<div>
+    <label for="category">Catégorie</label>
+    <select id="category" (change)="onCategoryChange($event)">
+      <option value="">Toutes</option>
+      <option *ngFor="let category of categories" [value]="category._id">
+        {{ category.name }}
+      </option>
+    </select>
+  
+    <label for="maxPrice">Prix Max</label>
+    <input
+      type="number"
+      id="maxPrice"
+      (input)="onPriceChange($event)"
+    />
+  </div>
+  
