@@ -1,28 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../../services/product/product.service';
-import { NgFor } from '@angular/common';
+import { CurrencyPipe, NgFor } from '@angular/common';
+import { Product } from '../../../models/product.model';
 
 @Component({
   selector: 'app-product-list',
   imports: [
     NgFor,
+    CurrencyPipe
   ],
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  products: any[] = [];
+  products: Product[] = [];
 
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(
-      (data) => {
-        this.products = data;
-      },
-      (error) => {
-        console.error('Erreur lors de la récupération des produits :', error);
-      }
-    );
+    this.productService.getProducts().subscribe((data) => {
+      this.products = data;
+    });
   }
 }

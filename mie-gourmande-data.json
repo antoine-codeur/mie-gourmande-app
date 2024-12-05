@@ -3,7 +3,7 @@
     {
       "_id": "675180ea09f16621aaaee8f5",
       "name": "Baguette Tradition",
-      "categoryId": "1",
+      "categoryId": "6751790809f16621aaaee8d6",
       "price": 1.2,
       "description": "Baguette traditionnelle, croustillante et savoureuse.",
       "image": "baguette.jpg",
@@ -12,7 +12,7 @@
     {
       "_id": "675180ea09f16621aaaee8f6",
       "name": "Croissant",
-      "categoryId": "1",
+      "categoryId": "6751790809f16621aaaee8d6",
       "price": 1,
       "description": "Croissant au beurre pur.",
       "image": "croissant.jpg",
@@ -21,7 +21,7 @@
     {
       "_id": "675180ea09f16621aaaee8f7",
       "name": "Éclair au Chocolat",
-      "categoryId": "2",
+      "categoryId": "6751790809f16621aaaee8d7",
       "price": 2.5,
       "description": "Délicieux éclair au chocolat, garni de crème pâtissière.",
       "image": "eclair.jpg",
@@ -30,7 +30,7 @@
     {
       "_id": "675180ea09f16621aaaee8f8",
       "name": "Tarte aux Fraises",
-      "categoryId": "2",
+      "categoryId": "6751790809f16621aaaee8d7",
       "price": 3,
       "description": "Tartelette aux fraises fraîches avec une base sablée.",
       "image": "tarte_fraises.jpg",
@@ -39,7 +39,7 @@
     {
       "_id": "675180ea09f16621aaaee8f9",
       "name": "Sandwich Jambon-Beurre",
-      "categoryId": "3",
+      "categoryId": "6751790809f16621aaaee8d8",
       "price": 3.5,
       "description": "Sandwich classique au jambon et beurre frais.",
       "image": "sandwich.jpg",
@@ -49,19 +49,16 @@
   "categories": [
     {
       "_id": "6751790809f16621aaaee8d6",
-      "id": "1",
       "name": "Boulangerie",
       "description": "Tous nos pains et viennoiseries fraîchement préparés."
     },
     {
       "_id": "6751790809f16621aaaee8d7",
-      "id": "2",
       "name": "Pâtisserie",
       "description": "Desserts, gâteaux et douceurs sucrées."
     },
     {
       "_id": "6751790809f16621aaaee8d8",
-      "id": "3",
       "name": "Sandwichs",
       "description": "Sandwichs gourmands faits maison."
     }
