@@ -68,15 +68,37 @@
   ],
   "promotions": [
     {
-      "id": "1",
       "name": "Promo -10%",
       "type": "percentage",
       "value": 10,
-      "productIds": ["1", "2"],
+      "productIds": [
+        "1",
+        "2",
+        "3"
+      ],
       "startDate": "2023-12-01",
       "endDate": "2023-12-31",
       "status": "active",
-      "code": "PROMO10"
+      "code": "PROMO10",
+      "id": "1"
+    },
+    {
+      "name": "Black November",
+      "type": "percentage",
+      "value": 25,
+      "productIds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "cf12"
+      ],
+      "startDate": "2024-11-01",
+      "endDate": "2024-11-29",
+      "status": "inactive",
+      "code": "BLACKNOVEMBER",
+      "id": "c4e6"
     }
   ]
 }

@@ -1,0 +1,52 @@
+<form [formGroup]="promotionForm" (ngSubmit)="savePromotion()">
+    <label for="name">Nom</label>
+    <input id="name" formControlName="name" />
+  
+    <label for="type">Type</label>
+    <select id="type" formControlName="type">
+      <option value="percentage">Pourcentage</option>
+      <option value="fixed">Montant fixe</option>
+    </select>
+  
+    <label for="value">Valeur</label>
+    <input id="value" type="number" formControlName="value" />
+  
+    <label>Produits concernés</label>
+    <div>
+      <label for="category-filter">Filtrer par catégorie</label>
+      <select id="category-filter" (change)="handleCategoryChange($event)">
+        <option value="">Toutes les catégories</option>
+        <option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </option>
+      </select>      
+    </div>
+  
+    <div *ngFor="let product of filteredProducts" class="product-checkbox">
+      <input
+        type="checkbox"
+        [id]="product.id"
+        [checked]="isProductSelected(product.id)"
+        (change)="toggleProductSelection(product.id)"
+      />
+      <label [for]="product.id">{{ product.name }}</label>
+    </div>
+  
+    <label for="startDate">Date début</label>
+    <input id="startDate" type="date" formControlName="startDate" />
+  
+    <label for="endDate">Date fin</label>
+    <input id="endDate" type="date" formControlName="endDate" />
+  
+    <label for="status">Statut</label>
+    <select id="status" formControlName="status">
+      <option value="active">Actif</option>
+      <option value="inactive">Inactif</option>
+    </select>
+  
+    <label for="code">Code Promotionnel</label>
+    <input id="code" formControlName="code" />
+  
+    <button type="submit" [disabled]="promotionForm.invalid">Sauvegarder</button>
+    <button type="button" (click)="cancel()">Annuler</button>
+</form>  

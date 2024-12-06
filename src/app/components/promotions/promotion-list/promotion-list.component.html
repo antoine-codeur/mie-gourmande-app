@@ -1,4 +1,5 @@
 <div class="promotion-list">
+    <button routerLink="/promotions/add">Ajouter une promotion</button>
     <table>
       <thead>
         <tr>
@@ -8,6 +9,7 @@
           <th>Date début</th>
           <th>Date fin</th>
           <th>Statut</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -18,7 +20,11 @@
           <td>{{ promotion.startDate }}</td>
           <td>{{ promotion.endDate }}</td>
           <td>{{ promotion.status === 'active' ? 'Actif' : 'Inactif' }}</td>
+          <td>
+            <button [routerLink]="['/promotions/edit', promotion.id]">Modifier</button>
+            <button (click)="deletePromotion(promotion.id)">Supprimer</button>
+          </td>
         </tr>
       </tbody>
     </table>
-</div>
+</div>  

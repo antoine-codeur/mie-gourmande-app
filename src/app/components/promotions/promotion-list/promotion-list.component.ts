@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Promotion } from '../../../models/promotion.model';
 import { PromotionService } from '../../../services/promotion/promotion.service';
 import { NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-promotion-list',
   imports: [
     NgFor,
+    RouterLink,
   ],
   templateUrl: './promotion-list.component.html',
   styleUrl: './promotion-list.component.scss'
@@ -25,4 +27,9 @@ export class PromotionListComponent implements OnInit {
       this.promotions = data;
     });
   }
+  deletePromotion(id: string): void {
+    this.promotionService.deletePromotion(id).subscribe(() => {
+      this.loadPromotions();
+    });
+  }  
 }
