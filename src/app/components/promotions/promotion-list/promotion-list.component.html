@@ -1,0 +1,30 @@
+<div class="promotion-list">
+    <button routerLink="/promotions/add">Ajouter une promotion</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Type</th>
+          <th>Valeur</th>
+          <th>Date début</th>
+          <th>Date fin</th>
+          <th>Statut</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let promotion of promotions">
+          <td>{{ promotion.name }}</td>
+          <td>{{ promotion.type === 'percentage' ? 'Pourcentage' : 'Montant fixe' }}</td>
+          <td>{{ promotion.value }}</td>
+          <td>{{ promotion.startDate }}</td>
+          <td>{{ promotion.endDate }}</td>
+          <td>{{ promotion.status === 'active' ? 'Actif' : 'Inactif' }}</td>
+          <td>
+            <button [routerLink]="['/promotions/edit', promotion.id]">Modifier</button>
+            <button (click)="deletePromotion(promotion.id)">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>  

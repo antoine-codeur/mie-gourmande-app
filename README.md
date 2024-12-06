@@ -78,6 +78,19 @@ Nous utilisons **JSON Server** pour simuler une API et gérer une base de donné
       "name": "Pâtisserie",
       "description": "Desserts, gâteaux et douceurs sucrées."
     }
+  ],
+  "promotions": [
+    {
+      "id": "1",
+      "name": "Réduction de 10%",
+      "type": "percentage",
+      "value": 10,
+      "productIds": ["1", "2"],
+      "startDate": "2024-01-01",
+      "endDate": "2024-01-31",
+      "status": "active",
+      "code": "PROMO10"
+    }
   ]
 }
 ```
@@ -179,6 +192,9 @@ Nous utilisons **Semantic Versioning (vX.Y.Z)** pour gérer les versions des rel
 
 - **Première release (Livrable 1)** : `v0.1.0`
   - Cette version inclut la gestion des produits et des catégories.
+
+- **Deuxième release (Livrable 2)** : `v0.2.0`
+  - Cette version inclut la gestion des promotions.
 
 ---
 
