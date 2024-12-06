@@ -20,7 +20,7 @@ Bienvenue dans **MieGourmandeApp**, une application gourmande construite avec �
 
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/antoine-codeur/mie-gourmande-app.git
+   git clone https://github.com/votre-repo/mie-gourmande-app.git
    ```
 2. Installez les dépendances :
    ```bash
@@ -37,7 +37,65 @@ Pour lancer un serveur de développement local :
 npm start
 ```
 
-Ensuite, ouvrez votre navigateur et accédez à `http://localhost:4200/`. L'application se rechargera automatiquement à chaque modification des fichiers sources.
+Ensuite, ouvrez votre navigateur et accédez à [http://localhost:4200/](http://localhost:4200/). L'application se rechargera automatiquement à chaque modification des fichiers sources.
+
+---
+
+## 🗃️ Base de Données Statique
+
+Nous utilisons **JSON Server** pour simuler une API et gérer une base de données statique localement. La base de données est définie dans le fichier `mie-gourmande-data.json`.
+
+### Exemple de Contenu
+
+```json
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Baguette Tradition",
+      "categoryId": "1",
+      "price": 1.2,
+      "description": "Baguette traditionnelle, croustillante et savoureuse.",
+      "stock": 100
+    },
+    {
+      "id": "2",
+      "name": "Croissant",
+      "categoryId": "1",
+      "price": 1.0,
+      "description": "Croissant au beurre pur.",
+      "stock": 50
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Boulangerie",
+      "description": "Tous nos pains et viennoiseries fraîchement préparés."
+    },
+    {
+      "id": "2",
+      "name": "Pâtisserie",
+      "description": "Desserts, gâteaux et douceurs sucrées."
+    }
+  ]
+}
+```
+
+---
+
+## 🛠️ Lancer le Serveur JSON
+
+Pour démarrer le serveur JSON et utiliser la base de données statique :
+
+1. Assurez-vous que `json-server` est installé comme dépendance (déjà inclus dans ce projet).
+2. Exécutez la commande suivante :
+
+```bash
+npm run start:api
+```
+
+3. Le serveur JSON sera accessible sur [http://localhost:3001](http://localhost:3001).
 
 ---
 
@@ -69,6 +127,26 @@ Les artefacts de compilation seront stockés dans le dossier `dist/`. Par défau
 
 ---
 
+## 🚨 Tests
+
+### Tests unitaires 🐛
+Pour exécuter les tests unitaires avec le test runner [Karma](https://karma-runner.github.io) :
+
+```bash
+npm test
+```
+
+### Tests End-to-End (E2E) 🚦
+Pour exécuter des tests end-to-end :
+
+```bash
+npm run e2e
+```
+
+Angular CLI ne propose pas de framework e2e par défaut. Vous pouvez en choisir un selon vos besoins, comme **Cypress** ou **Protractor**.
+
+---
+
 ## 🗂️ Structure du Projet
 
 ```
@@ -89,18 +167,6 @@ mie-gourmande-app/
 
 ---
 
-## 📖 Ressources Additionnelles
-
-- 🔗 [Documentation Angular CLI](https://angular.dev/tools/cli)
-- 📚 [Tutoriels Angular](https://angular.dev/start)
-- 🛠️ [Outils de Développement Angular](https://angular.dev/guide/devtools)
-
----
-
-Voici la section mise à jour pour refléter correctement le premier livrable comme une version mineure **0.1.0** :
-
----
-
 ## 🏷️ Versioning
 
 Nous utilisons **Semantic Versioning (vX.Y.Z)** pour gérer les versions des releases :
@@ -116,6 +182,14 @@ Nous utilisons **Semantic Versioning (vX.Y.Z)** pour gérer les versions des rel
 
 ---
 
+## 📖 Ressources Additionnelles
+
+- 🔗 [Documentation Angular CLI](https://angular.dev/tools/cli)
+- 📚 [Tutoriels Angular](https://angular.dev/start)
+- 🛠️ [Outils de Développement Angular](https://angular.dev/guide/devtools)
+
+---
+
 ## ✨ Contributeurs
 
-Merci à tous les contributeurs qui ont aidé à développer ce projet (MOI) ! 💖
+Merci à tous les contributeurs qui ont aidé à développer ce projet, MOI! 💖
