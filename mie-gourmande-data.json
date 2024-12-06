@@ -65,5 +65,18 @@
       "name": "Sandwichs",
       "description": "Sandwichs gourmands faits maison."
     }
+  ],
+  "promotions": [
+    {
+      "id": "1",
+      "name": "Promo -10%",
+      "type": "percentage",
+      "value": 10,
+      "productIds": ["1", "2"],
+      "startDate": "2023-12-01",
+      "endDate": "2023-12-31",
+      "status": "active",
+      "code": "PROMO10"
+    }
   ]
 }
