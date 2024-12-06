@@ -5,7 +5,9 @@ import { NgFor } from '@angular/common';
 @Component({
   selector: 'app-product-filter',
   standalone: true,
-  imports: [NgFor],
+  imports: [
+    NgFor,
+  ],
   templateUrl: './product-filter.component.html',
   styleUrls: ['./product-filter.component.scss']
 })

@@ -10,7 +10,7 @@ import { NgFor } from '@angular/common';
   ],
   standalone: true,
   templateUrl: './category-list.component.html',
-  styleUrl: './category-list.component.scss'
+  styleUrls: ['./category-list.component.scss'],
 })
 export class CategoryListComponent implements OnInit {
   categories: Category[] = [];
@@ -18,6 +18,10 @@ export class CategoryListComponent implements OnInit {
   constructor(private categoryService: CategoryService) {}
 
   ngOnInit(): void {
+    this.loadCategories();
+  }
+ 
+  loadCategories(): void {
     this.categoryService.getCategories().subscribe((data) => {
       this.categories = data;
     });

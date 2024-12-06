@@ -1,82 +1,67 @@
 {
   "products": [
     {
-      "_id": "675180ea09f16621aaaee8f5",
+      "id": "1",
       "name": "Baguette Tradition",
-      "categoryId": "6751790809f16621aaaee8d6",
+      "categoryId": "1",
       "price": 1.2,
       "description": "Baguette traditionnelle, croustillante et savoureuse.",
-      "image": "baguette.jpg",
       "stock": 100
     },
     {
-      "_id": "675180ea09f16621aaaee8f6",
+      "id": "2",
       "name": "Croissant",
-      "categoryId": "6751790809f16621aaaee8d6",
+      "categoryId": "1",
       "price": 1,
       "description": "Croissant au beurre pur.",
-      "image": "croissant.jpg",
       "stock": 50
     },
     {
-      "_id": "675180ea09f16621aaaee8f7",
+      "id": "3",
       "name": "Éclair au Chocolat",
-      "categoryId": "6751790809f16621aaaee8d7",
+      "categoryId": "2",
       "price": 2.5,
       "description": "Délicieux éclair au chocolat, garni de crème pâtissière.",
-      "image": "eclair.jpg",
       "stock": 30
     },
     {
-      "_id": "675180ea09f16621aaaee8f8",
+      "id": "4",
       "name": "Tarte aux Fraises",
-      "categoryId": "6751790809f16621aaaee8d7",
+      "categoryId": "2",
       "price": 3,
       "description": "Tartelette aux fraises fraîches avec une base sablée.",
-      "image": "tarte_fraises.jpg",
       "stock": 20
     },
     {
-      "_id": "675180ea09f16621aaaee8f9",
       "name": "Sandwich Jambon-Beurre",
-      "categoryId": "6751790809f16621aaaee8d8",
-      "price": 3.5,
       "description": "Sandwich classique au jambon et beurre frais.",
-      "image": "sandwich.jpg",
-      "stock": 40
+      "price": 3.5,
+      "stock": 41,
+      "categoryId": "3",
+      "id": "5"
     },
     {
-      "id": "49b2",
-      "_id": "",
-      "name": "Pain au maïs",
-      "description": "",
-      "price": 1.2,
+      "id": "cf12",
+      "name": "Burger",
+      "description": "steakhouse",
+      "price": 5,
       "stock": 2,
-      "categoryId": "6751790809f16621aaaee8d6"
-    },
-    {
-      "id": "51e5",
-      "_id": "",
-      "name": "Tarte au citron",
-      "description": "C'est bon !",
-      "price": -7,
-      "stock": 1,
-      "categoryId": "6751790809f16621aaaee8d7"
+      "categoryId": "3"
     }
   ],
   "categories": [
     {
-      "_id": "6751790809f16621aaaee8d6",
+      "id": "1",
       "name": "Boulangerie",
       "description": "Tous nos pains et viennoiseries fraîchement préparés."
     },
     {
-      "_id": "6751790809f16621aaaee8d7",
+      "id": "2",
       "name": "Pâtisserie",
       "description": "Desserts, gâteaux et douceurs sucrées."
     },
     {
-      "_id": "6751790809f16621aaaee8d8",
+      "id": "3",
       "name": "Sandwichs",
       "description": "Sandwichs gourmands faits maison."
     }

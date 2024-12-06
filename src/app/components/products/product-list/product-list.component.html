@@ -20,8 +20,8 @@
         <td>{{ product.stock }}</td>
         <td>{{ getCategoryName(product.categoryId) }}</td>
         <td>
-          <button (click)="navigateToEdit(product._id)">Modifier</button>
-          <button (click)="deleteProduct(product._id)">Supprimer</button>
+          <button (click)="navigateToEdit(product.id)">Modifier</button>
+          <button (click)="deleteProduct(product.id)">Supprimer</button>
         </td>
       </tr>
     </tbody>

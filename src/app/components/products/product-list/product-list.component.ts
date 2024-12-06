@@ -32,25 +32,21 @@ export class ProductListComponent implements OnInit {
     this.loadProducts();
     this.loadCategories();
   }
-
   loadProducts(): void {
     this.productService.getProducts().subscribe((data) => {
       this.products = data;
-      this.filteredProducts = data; // Initial filter
+      this.filteredProducts = data;
     });
   }
-
   loadCategories(): void {
     this.categoryService.getCategories().subscribe((data) => {
       this.categories = data;
     });
   }
-
   getCategoryName(categoryId: string): string {
-    const category = this.categories.find((cat) => cat._id === categoryId);
+    const category = this.categories.find((cat) => cat.id === categoryId);
     return category ? category.name : 'Non défini';
   }
-
   applyFilter(filter: any): void {
     this.filteredProducts = this.products.filter((product) => {
       const matchesCategory =
@@ -60,15 +56,12 @@ export class ProductListComponent implements OnInit {
       return matchesCategory && matchesPrice;
     });
   }
-
   navigateToAdd(): void {
     this.router.navigate(['/products/add']);
   }
-
   navigateToEdit(productId: string): void {
     this.router.navigate([`/products/edit/${productId}`]);
   }
-
   deleteProduct(productId: string): void {
     this.productService.deleteProduct(productId).subscribe(() => {
       this.loadProducts();
