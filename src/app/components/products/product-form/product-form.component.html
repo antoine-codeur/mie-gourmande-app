@@ -1,0 +1,62 @@
+<form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+  <label for="name">Nom</label>
+  <input 
+    id="name" 
+    formControlName="name" 
+    required 
+  />
+  <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched">
+    Le nom est requis.
+  </div>
+
+  <label for="description">Description</label>
+  <textarea 
+    id="description" 
+    formControlName="description" 
+    required>
+  </textarea>
+  <div *ngIf="productForm.get('description')?.invalid && productForm.get('description')?.touched">
+    La description est requise.
+  </div>
+
+  <label for="price">Prix</label>
+  <input 
+    id="price" 
+    type="number" 
+    formControlName="price"
+    min="0"
+    required 
+  />
+  <div *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+    Le prix doit être un nombre valide.
+  </div>
+
+  <label for="stock">Stock</label>
+  <input 
+    id="stock" 
+    type="number" 
+    formControlName="stock"
+    min="0"
+    required 
+  />
+  <div *ngIf="productForm.get('stock')?.invalid && productForm.get('stock')?.touched">
+    Le stock doit être un nombre valide.
+  </div>
+
+  <label for="category">Catégorie</label>
+  <select 
+    id="category" 
+    formControlName="categoryId" 
+    required
+  >
+    <option *ngFor="let category of categories" [value]="category.id">
+      {{ category.name }}
+    </option>
+  </select>
+  <div *ngIf="productForm.get('categoryId')?.invalid && productForm.get('categoryId')?.touched">
+    La catégorie est requise.
+  </div>
+
+  <button type="submit" [disabled]="productForm.invalid">Sauvegarder</button>
+  <button type="button" (click)="cancel()">Annuler</button>
+</form>

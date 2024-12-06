@@ -1,0 +1,29 @@
+<div>
+  <app-product-filter (filter)="applyFilter($event)"></app-product-filter>
+  <button (click)="navigateToAdd()">Ajouter un produit</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Prix</th>
+        <th>Stock</th>
+        <th>Catégorie</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of filteredProducts">
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price | currency:'EUR' }}</td>
+        <td>{{ product.stock }}</td>
+        <td>{{ getCategoryName(product.categoryId) }}</td>
+        <td>
+          <button (click)="navigateToEdit(product.id)">Modifier</button>
+          <button (click)="deleteProduct(product.id)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

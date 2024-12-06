@@ -1,0 +1,69 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Baguette Tradition",
+      "categoryId": "1",
+      "price": 1.2,
+      "description": "Baguette traditionnelle, croustillante et savoureuse.",
+      "stock": 100
+    },
+    {
+      "id": "2",
+      "name": "Croissant",
+      "categoryId": "1",
+      "price": 1,
+      "description": "Croissant au beurre pur.",
+      "stock": 50
+    },
+    {
+      "id": "3",
+      "name": "Éclair au Chocolat",
+      "categoryId": "2",
+      "price": 2.5,
+      "description": "Délicieux éclair au chocolat, garni de crème pâtissière.",
+      "stock": 30
+    },
+    {
+      "id": "4",
+      "name": "Tarte aux Fraises",
+      "categoryId": "2",
+      "price": 3,
+      "description": "Tartelette aux fraises fraîches avec une base sablée.",
+      "stock": 20
+    },
+    {
+      "name": "Sandwich Jambon-Beurre",
+      "description": "Sandwich classique au jambon et beurre frais.",
+      "price": 3.5,
+      "stock": 41,
+      "categoryId": "3",
+      "id": "5"
+    },
+    {
+      "id": "cf12",
+      "name": "Burger",
+      "description": "steakhouse",
+      "price": 5,
+      "stock": 2,
+      "categoryId": "3"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Boulangerie",
+      "description": "Tous nos pains et viennoiseries fraîchement préparés."
+    },
+    {
+      "id": "2",
+      "name": "Pâtisserie",
+      "description": "Desserts, gâteaux et douceurs sucrées."
+    },
+    {
+      "id": "3",
+      "name": "Sandwichs",
+      "description": "Sandwichs gourmands faits maison."
+    }
+  ]
+}
