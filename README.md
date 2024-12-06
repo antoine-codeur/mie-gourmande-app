@@ -1,59 +1,121 @@
-# MieGourmandeApp
+# 🍞 MieGourmandeApp
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.3.
+Bienvenue dans **MieGourmandeApp**, une application gourmande construite avec 💻 **Angular 19** et des outils modernes pour une expérience utilisateur fluide et performante !
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Fonctionnalités
+
+- **✨ Gestion des produits :**
+  - Ajout, modification, suppression et affichage des produits.
+  - Filtrage des produits par catégorie et prix.
+- **📖 Gestion des catégories :**
+  - Affichage des catégories disponibles avec une interface intuitive.
+- **🐛 Tests unitaires et E2E :**
+  - Tests intégrés pour garantir la stabilité et les performances.
+
+---
+
+## 📦 Installation
+
+1. Clonez le dépôt :
+   ```bash
+   git clone https://github.com/antoine-codeur/mie-gourmande-app.git
+   ```
+2. Installez les dépendances :
+   ```bash
+   npm install
+   ```
+
+---
+
+## 💻 Serveur de Développement
+
+Pour lancer un serveur de développement local :
 
 ```bash
-ng serve
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Ensuite, ouvrez votre navigateur et accédez à `http://localhost:4200/`. L'application se rechargera automatiquement à chaque modification des fichiers sources.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🛠️ Génération de Code
+
+L'Angular CLI propose des outils puissants de scaffolding. Pour générer un nouveau composant, exécutez :
 
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Pour une liste complète des schémas disponibles (`components`, `directives`, `pipes`, etc.) :
 
 ```bash
 ng generate --help
 ```
 
-## Building
+---
 
-To build the project run:
+## 🏗️ Compilation
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Pour compiler le projet :
 
 ```bash
-ng test
+npm run build
 ```
 
-## Running end-to-end tests
+Les artefacts de compilation seront stockés dans le dossier `dist/`. Par défaut, la build de production optimise l'application pour des performances et une vitesse maximales.
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
+## 🗂️ Structure du Projet
+
+```
+mie-gourmande-app/
+├── src/
+│   ├── app/
+│   │   ├── components/    # Composants Angular (UI)
+│   │   ├── services/      # Services pour la logique métier
+│   │   ├── models/        # Interfaces TypeScript
+│   │   ├── pages/         # Pages principales
+│   │   └── app.module.ts  # Module principal
+│   ├── assets/            # Fichiers statiques (images, styles, etc.)
+│   └── environments/      # Fichiers d'environnement
+├── angular.json           # Configuration Angular CLI
+├── package.json           # Dépendances et scripts
+└── README.md              # Documentation du projet
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 📖 Ressources Additionnelles
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- 🔗 [Documentation Angular CLI](https://angular.dev/tools/cli)
+- 📚 [Tutoriels Angular](https://angular.dev/start)
+- 🛠️ [Outils de Développement Angular](https://angular.dev/guide/devtools)
+
+---
+
+Voici la section mise à jour pour refléter correctement le premier livrable comme une version mineure **0.1.0** :
+
+---
+
+## 🏷️ Versioning
+
+Nous utilisons **Semantic Versioning (vX.Y.Z)** pour gérer les versions des releases :
+
+- **`X` (MAJOR)** : Changements majeurs ou incompatibles avec les versions précédentes.
+- **`Y` (MINOR)** : Ajout de nouvelles fonctionnalités tout en restant rétrocompatible.
+- **`Z` (PATCH)** : Corrections de bugs ou améliorations mineures sans ajout de nouvelles fonctionnalités.
+
+### 🛠️ V0
+
+- **Première release (Livrable 1)** : `v0.1.0`
+  - Cette version inclut la gestion des produits et des catégories.
+
+---
+
+## ✨ Contributeurs
+
+Merci à tous les contributeurs qui ont aidé à développer ce projet (MOI) ! 💖
